@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insertar Materia</title>
+</head>
+
+<body>
+	<form th:action="@{/estudiantes/insetar}" th:object="${estudiante}" th:method="POST">
+		<table>
+			
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text"  th:field="${estudiante.nombre}"></td>
+			</tr>
+			<tr>
+				<td><label>	Apellido:</label></td>
+				<td><input type="text"  th:field="${estudiante.apellido}"></td>
+			</tr>
+			<tr>
+				<td><label>Cedula:</label></td>
+				<td><input type="text"   th:field="${estudiante.cedula}"></td>
+			</tr>
+			<tr>
+				<td><label>Genero:</label></td>
+				<td><input type="text"  th:field="${estudiante.genero}"></td>
+			</tr>
+		</table>
+		<input type="submit" value="Crear">
+	</form>
+</body>
+
+</html>
